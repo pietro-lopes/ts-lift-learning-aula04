@@ -11,8 +11,8 @@ describe("Tarefa 01 - Criar token", function () {
     const token = await LiftToken.deploy();
     // Valores a serem testados a serem testados
     const decimals = 9
-    const totalSupply = 1e6 * 10 ** decimals
-    const transferAmount = 1_000_000
+    const totalSupply = BigInt(1e6 * 10 ** decimals)
+    const transferAmount = BigInt(1_000_000)
     // return nos valores para que os testes recebam através do loadFixture
     return { token, owner, totalSupply, decimals, anotherAccount, transferAmount };
   }
